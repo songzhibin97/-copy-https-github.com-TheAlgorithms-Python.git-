@@ -1,12 +1,14 @@
 # Random Forest Classification
 
 # Importing the libraries
+import os
 import numpy as np
 import matplotlib.pyplot as plt
 import pandas as pd
 
 # Importing the dataset
-dataset = pd.read_csv('Social_Network_Ads.csv')
+filename = os.path.join(os.path.dirname(os.path.realpath(__file__)), 'Social_Network_Ads.csv')
+dataset = pd.read_csv(filename)
 X = dataset.iloc[:, [2, 3]].values
 y = dataset.iloc[:, 4].values
 
